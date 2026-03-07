@@ -169,7 +169,7 @@ int main(void)
     }
     HAL_Delay(1);
     ADS1292_ParseData();
-    //float data[2] = {ADS_Ch1_Volt, ADS_Ch2_Volt};
+    float data[2] = {ADS_Ch1_Volt, ADS_Ch2_Volt};
     
     sendfloatdata(data, 2);
    // 读取寄存器测试通信/
