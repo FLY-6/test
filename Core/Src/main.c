@@ -167,7 +167,7 @@ int main(void)
       HAL_SPI_TransmitReceive(&hspi1, (uint8_t*)"\x00\x00\x00\x00\x00\x00\x00\x00\x00", ADS_Data_Buf, 9, HAL_MAX_DELAY);
       ADS_Data_Ready = 0; // 清除就绪标志
     }
-
+    HAL_Delay(1);
     ADS1292_ParseData();
     //float data[2] = {ADS_Ch1_Volt, ADS_Ch2_Volt};
     
